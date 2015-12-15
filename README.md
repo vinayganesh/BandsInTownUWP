@@ -9,10 +9,12 @@ BandsInTownUWP is a windows 10 Universal Windows platform SDK for the [Bands In 
 5. Download the first link that appears in the result list.
 
 #### Steps to setup the Caliburn Micro framework in the UWP application
-1. In the BandsInTownUI project, open App.Xaml.cs
-2. Just above the App constuctor add ```private WinRTContainer _container;``` which is defining the main container for the application.
-3. Remove the App.xaml.cs implementing the ```Application``` interface. Just remove the ```:Application``` next to ```App:Application```
-4. Since UWP is based on WinRT, we don't use a bootstrapper.The reason for this is that Windows.UI.Xaml.Application exposes most of    it's functionality through method overrides and not events.
+In the BandsInTownUI project, open App.Xaml.cs
+
+Just above the App constuctor add ```private WinRTContainer _container;``` which is defining the main container for the application.
+
+Remove the App.xaml.cs implementing the ```Application``` interface. Just remove the ```:Application``` next to ```App:Application```
+Since UWP is based on WinRT, we don't use a bootstrapper.The reason for this is that Windows.UI.Xaml.Application exposes most of    it's functionality through method overrides and not events.
 
 So add these functions in the App.xaml.cs class,
 
@@ -38,7 +40,7 @@ So add these functions in the App.xaml.cs class,
       _container.BuildUp(instance);
   }
   ```
-5. Instead of creating a new Bootstrapper in WinRT replace the existing Application with as shown below
+Instead of creating a new Bootstrapper in WinRT replace the existing Application with as shown below
 
 Open App.xaml and paste the code below, 
 ```
@@ -54,7 +56,7 @@ Open App.xaml and paste the code below,
 ```
 Now the Caliburn Micro framework is setup on your application. Though Caliburn Micro might feel a bit hard to use initially, it is pretty slick. It makes our life really simple. We don't have to reinvent the wheel to implement MVVM pattern in our application. The Caliburn Micro framework does the magic. 
   
-6. There are two approaches for displaying the root frame in Caliburn Micro framework. One is by using the View First approach the other is using the ViewModel first approach. UWP applications are meant to work with a large number of device families and hence we need to try and work with the best suitable approach from the list of two above. The best solution is to use the ViewModel approach because the on Windows phones, the navigation is tightly coupled with the hardware. For example: the back button. But again, if you are targetting your app just for desktop then you can try and use the View First Approach.
+There are two approaches for displaying the root frame in Caliburn Micro framework. One is by using the View First approach the other is using the ViewModel first approach. UWP applications are meant to work with a large number of device families and hence we need to try and work with the best suitable approach from the list of two above. The best solution is to use the ViewModel approach because the on Windows phones, the navigation is tightly coupled with the hardware. For example: the back button. But again, if you are targetting your app just for desktop then you can try and use the View First Approach.
 
 So here's what you need to do now, 
 In the BandsInTownUI application, create a folder called ViewModels and create a class called TestViewModel.cs. Once that is done, open App.xaml.cs and make your OnLaunched() events look like this, 
