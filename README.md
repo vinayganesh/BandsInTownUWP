@@ -76,9 +76,6 @@ Firtly, you will have to create a HttpManager class. You can do this in the same
 2. Right click on HttpManager and click on NuGet packages and in the search box under browse type json and installed the Newtonsoft json.net package. 
 3. Now create a new class called HttpClientManager.cs under the HttpManager class and add the simplest code to make a http request as shown below,
 
-First create a single pattern to make sure just one instance is created for the cass
-```csharp
-
 
 
 
