@@ -68,8 +68,21 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
+#### How to setup services and constructor injection
+For ease of explanation, i will show you how to setup a part of ArtistInformationService and inject the service into the TestViewModel that you created in the previous step. 
 
-    
+Firtly, you will have to create a HttpManager class. You can do this in the same project but i would recommend to separate the concerns but having a different class library. Follow the steps below, 
+1. Create a new project(class library) and call it HttpManager. 
+2. Right click on HttpManager and click on NuGet packages and in the search box under browse type json and installed the Newtonsoft json.net package. 
+3. Now create a new class called HttpClientManager.cs under the HttpManager class and add the simplest code to make a http request as shown below,
+
+First create a single pattern to make sure just one instance is created for the cass
+```csharp
+
+
+
+
+
 
 
 
