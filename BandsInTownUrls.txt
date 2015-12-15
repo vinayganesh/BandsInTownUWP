@@ -1,0 +1,11 @@
+Recommended Artists
+http://app.bandsintown.com/artists/recommended?popular=true&per_page=50&authenticate=false
+
+All Genre
+http://news.bandsintown.com/getGenre?genre=All&min_trackers=3000&max_trackers=29999&limit=10
+
+Pop Genre
+http://news.bandsintown.com/getGenre?genre=Pop&min_trackers=3000&max_trackers=29999&limit=5
+
+Rock Genre
+http://news.bandsintown.com/getGenre?genre=Rock&min_trackers=3000&max_trackers=29999&limit=5
