@@ -92,7 +92,7 @@ public static HttpClientManager Instance
             return _instance;
         }
     }
-        }
+}
 ``` 
 Now create a simple Http Request function as shown below,  
 ```csharp
