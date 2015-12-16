@@ -16,27 +16,27 @@ BandsInTownUWP is a windows 10 Universal Windows platform SDK for the [Bands In 
 3. Remove the App.xaml.cs implementing the ```Application``` interface. Just remove the ```:Application``` next to ```App:Application```
 4. Since UWP is based on WinRT, we don't use a bootstrapper.The reason for this is that Windows.UI.Xaml.Application exposes most of    it's functionality through method overrides and not events. So add these functions in the App.xaml.cs class,
  ```csharp
-   protected override void Configure()
-   {
-       _container = new WinRTContainer();
-       _container.RegisterWinRTServices();
-   }
+protected override void Configure()
+{
+    _container = new WinRTContainer();
+    _container.RegisterWinRTServices();
+}
  
-  protected override object GetInstance(Type service, string key)
-  {
-      return _container.GetInstance(service, key);
-  }
+protected override object GetInstance(Type service, string key)
+{
+    return _container.GetInstance(service, key);
+}
 
-  protected override IEnumerable<object> GetAllInstances(Type service)
-  {
-      return _container.GetAllInstances(service);
-  }
+protected override IEnumerable<object> GetAllInstances(Type service)
+{
+    return _container.GetAllInstances(service);
+}
 
-  protected override void BuildUp(object instance)
-  {
-      _container.BuildUp(instance);
-  }
-  ```
+protected override void BuildUp(object instance)
+{
+    _container.BuildUp(instance);
+}
+```
 5. Instead of creating a new Bootstrapper in WinRT replace the existing Application with as shown below,
 Open App.xaml and paste the code below, 
 ```
@@ -76,42 +76,42 @@ Firtly, you will have to create a HttpManager class. You can do this in the same
 3. Now create a new class called ```HttpClientManager.cs``` under the HttpManager class and add the simplest code to make a http request.
 4. Create a singleton class instance as shown below to make sure it creates not more than one instance and at the same time provide a global point of access to that instance.
 ```csharp
-        private static HttpClientManager _instance = null;
-        private static readonly object _lock = new object();
+private static HttpClientManager _instance = null;
+private static readonly object _lock = new object();
 
-        public static HttpClientManager Instance
+public static HttpClientManager Instance
+{
+    get
+    {
+        lock (_lock)
         {
-            get
+            if (_instance == null)
             {
-                lock (_lock)
-                {
-                    if (_instance == null)
-                    {
-                        _instance = new HttpClientManager();
-                    }
-                    return _instance;
-                }
+                _instance = new HttpClientManager();
             }
+            return _instance;
+        }
+    }
         }
 ``` 
 Now create a simple Http Request function as shown below,  
 ```csharp
-        public async Task<string> Request(string url)
-        {
-            var uri = new Uri(url);
-            var httpClient = new HttpClient();
+public async Task<string> Request(string url)
+{
+    var uri = new Uri(url);
+    var httpClient = new HttpClient();
 
-            try
-            {
-                var result = await httpClient.GetStringAsync(uri);
-                return result;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-                return string.Empty;
-            }
-        }
+    try
+    {
+        var result = await httpClient.GetStringAsync(uri);
+        return result;
+    }
+    catch (Exception ex)
+    {
+        Debug.WriteLine(ex.Message);
+        return string.Empty;
+    }
+}
 ```
 Thats pretty much it. Your app is ready to make http calls to the Bands in Town API. 
 
@@ -122,16 +122,16 @@ Thats pretty much it. Your app is ready to make http calls to the Bands in Town 
 3. Create a new class called ```ArtistInformationService.cs``` under ```Services``` folder and implement the ```IArtistInformationService.cs``` The implementation should look like this, 
 
 ```csharp
-      public async Task<ArtistContract> GetArtistInfo(string artistName)
-        {
-            var requestUrl = Constants.BaseURL + Constants.Artists + artistName + Constants.ApiVersion + Constants.AppID;
-            
-            var artistRawData = await HttpManager.HttpClientManager.Instance.Request(requestUrl);
+public async Task<ArtistContract> GetArtistInfo(string artistName)
+{
+    var requestUrl = Constants.BaseURL + Constants.Artists + artistName + Constants.ApiVersion + Constants.AppID;
+    
+    var artistRawData = await HttpManager.HttpClientManager.Instance.Request(requestUrl);
 
-            var artistJsonData = JsonConvert.DeserializeObject<ArtistContract>(artistRawData);
+    var artistJsonData = JsonConvert.DeserializeObject<ArtistContract>(artistRawData);
 
-            return artistJsonData;
-        }
+    return artistJsonData;
+}
 ```
 NOTE: I have used another class called constants to define all the url information as shown [here](https://github.com/vinayganesh/BandsInTownUWP/blob/master/AppConstants/Constants.cs)
 
@@ -141,21 +141,25 @@ Create a constructor in the ```TestViewModel.cs``` and add inject the services i
 
 Declare this before the class ```private IArtistInformationService _artistInformation;``` to use it in the constructor as shown below, 
 ```csharp
-        public TestViewModel(IArtistInformationService artistInformation)
-        {
-            _artistInformation = artistInformationl
-        }
+public TestViewModel(IArtistInformationService artistInformation)
+{
+    _artistInformation = artistInformationl
+}
 ```
 
 Now you have everything ready to make a call to the server and retrieve the artist information but how will you test it. Here's how you can do it. Just let the ```TestViewModel.cs``` implement the Screen abstract class from Caliburn Mirco and add the following code to fix the starting point of your application. When you run the application, the OnInitialize() method the root view is what is going to be called first. Here i am just tring to request the information for one of my favorite heavy metal bands, Megadeth.  
 ```csharp
-        protected override void OnInitialize()
-        {
-           var jsonArtistData = await _artistInformation.GetArtistInfo("Megadeth");
-        }
+protected override void OnInitialize()
+{
+   var jsonArtistData = await _artistInformation.GetArtistInfo("Megadeth");
+}
 ```
 
-The jsonAristData object will contain all the information about the band Megadeth as shown [here](http://www.bandsintown.com/api/responses#artist-json) 
+The jsonAristData object will contain all the information about the band Megadeth as shown [here](http://www.bandsintown.com/api/responses#artist-json). 
+
+###Future additions, 
+
+Creating a UI for the data received using Caliburn Micro and the new UWP layout called the relative layout that will help the app scale from a phone - tablet - desktop. 
 
 
 
