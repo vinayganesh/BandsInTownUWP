@@ -117,6 +117,7 @@ Thats pretty much it. Your app is ready to make http calls to the Bands in Town 
 
 ##### Creating Services
 1. Create two folders under ```BandsInTownUWPUI``` project and call them ```IServices``` and ```Services```
+2. You need to know what the server response is to deserialize the data. I use an online tool called [JsontoC#](http://json2csharp.com/) to convert the json information into a C# class that can be used as a contract. Take a look at the ```ArtistContract``` [here](https://github.com/vinayganesh/BandsInTownUWP/blob/master/HttpClient/DataContract/ArtistContract.cs)
 2. Create a new interface called IArtistInformationService under IServices folder and declare a function as shown below, ```Task<ArtistContract> GetArtistInfo(string artistName);``` This function should retrieve the list of artist properties for a given artist. 
 3. Create a new class called ```ArtistInformationService.cs``` under ```Services``` folder and implement the ```IArtistInformationService.cs``` The implementation should look like this, 
 
@@ -132,6 +133,7 @@ Thats pretty much it. Your app is ready to make http calls to the Bands in Town 
             return artistJsonData;
         }
 ```
+NOTE: I have used another class called constants to define all the url information as shown [here](https://github.com/vinayganesh/BandsInTownUWP/blob/master/AppConstants/Constants.cs)
 
 ##### Setting up constructor Injection
 
