@@ -93,8 +93,8 @@ Firtly, you will have to create a HttpManager class. You can do this in the same
                 }
             }
         }
-```
-5. Now create a simple Http Request function as shown below, 
+``` 
+Now create a simple Http Request function as shown below,  
 ```csharp
         public async Task<string> Request(string url)
         {
@@ -116,15 +116,9 @@ Firtly, you will have to create a HttpManager class. You can do this in the same
 Thats pretty much it. Your app is ready to make http calls to the Bands in Town API. 
 
 ##### Creating Services
-Create two folders under ```BandsInTownUWPUI``` project and call them ```IServices``` and ```Services```
-
-Create a new interface called IArtistInformationService under IServices folder and declare a function as shown below, 
-
-```Task<ArtistContract> GetArtistInfo(string artistName);```
-
-This function should retrieve the list of artist properties for a given artist. 
-
-Create a new class called ```ArtistInformationService.cs``` under ```Services``` folder and implement the ```IArtistInformationService.cs``` The implementation should look like this, 
+1. Create two folders under ```BandsInTownUWPUI``` project and call them ```IServices``` and ```Services```
+2. Create a new interface called IArtistInformationService under IServices folder and declare a function as shown below, ```Task<ArtistContract> GetArtistInfo(string artistName);``` This function should retrieve the list of artist properties for a given artist. 
+3. Create a new class called ```ArtistInformationService.cs``` under ```Services``` folder and implement the ```IArtistInformationService.cs``` The implementation should look like this, 
 
 ```csharp
       public async Task<ArtistContract> GetArtistInfo(string artistName)
@@ -138,6 +132,31 @@ Create a new class called ```ArtistInformationService.cs``` under ```Services```
             return artistJsonData;
         }
 ```
+
+##### Setting up constructor Injection
+
+Create a constructor in the ```TestViewModel.cs``` and add inject the services into the constructor as shown below. 
+
+Declare this before the class ```private IArtistInformationService _artistInformation;``` to use it in the constructor as shown below, 
+```csharp
+        public TestViewModel(IArtistInformationService artistInformation)
+        {
+            _artistInformation = artistInformationl
+        }
+```
+
+Now you have everything ready to make a call to the server and retrieve the artist information but how will you test it. Here's how you can do it. Just let the ```TestViewModel.cs``` implement the Screen abstract class from Caliburn Mirco and add the following code to fix the starting point of your application. When you run the application, the OnInitialize() method the root view is what is going to be called first. Here i am just tring to request the information for one of my favorite heavy metal bands, Megadeth.  
+```csharp
+        protected override void OnInitialize()
+        {
+           var jsonArtistData = await _artistInformation.GetArtistInfo("Megadeth");
+        }
+```
+
+The jsonAristData object will contain all the information about the band Megadeth as shown [here](http://www.bandsintown.com/api/responses#artist-json) 
+
+
+
 
 
 
