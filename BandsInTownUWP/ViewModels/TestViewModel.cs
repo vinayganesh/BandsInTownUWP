@@ -1,4 +1,5 @@
-﻿using BandsInTownUWP.IServices;
+﻿using System.Diagnostics;
+using BandsInTownUWP.IServices;
 using Caliburn.Micro;
 
 namespace BandsInTownUWP.ViewModels

@@ -38,7 +38,6 @@ namespace HttpManager
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // Details in ex.Message and ex.HResult.    
                 return string.Empty;
             }
         }

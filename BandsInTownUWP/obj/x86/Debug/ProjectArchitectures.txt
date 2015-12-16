@@ -1,4 +1,0 @@
-C:\Users\vinayganesh\Documents\Visual Studio 2015\Projects\BandsInTownUWP\AppConstants\AppConstants.csproj;x86
-C:\Users\vinayganesh\Documents\Visual Studio 2015\Projects\BandsInTownUWP\AppConstants\AppConstants.csproj;x86
-C:\Users\vinayganesh\Documents\Visual Studio 2015\Projects\BandsInTownUWP\BandsInTownUWP\BandsInTownUI.csproj;x86
-C:\Users\vinayganesh\Documents\Visual Studio 2015\Projects\BandsInTownUWP\HttpClient\HttpManager.csproj;x86
