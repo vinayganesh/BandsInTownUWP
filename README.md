@@ -16,26 +16,30 @@ BandsInTownUWP is a windows 10 Universal Windows platform SDK for the [Bands In 
 3. Remove the App.xaml.cs implementing the ```Application``` interface. Just remove the ```:Application``` next to ```App:Application```
 4. Since UWP is based on WinRT, we don't use a bootstrapper.The reason for this is that Windows.UI.Xaml.Application exposes most of    it's functionality through method overrides and not events. So add these functions in the App.xaml.cs class,
  ```csharp
-protected override void Configure()
-{
-    _container = new WinRTContainer();
-    _container.RegisterWinRTServices();
-}
+        protected override void Configure()
+        {
+            _container = new WinRTContainer();
+            _container.RegisterWinRTServices();
+
+            _container.PerRequest<TestViewModel>();
+            _container.Singleton<IArtistInformationService, ArtistInformationService>();
+            
+        }
  
-protected override object GetInstance(Type service, string key)
-{
-    return _container.GetInstance(service, key);
-}
+        protected override object GetInstance(Type service, string key)
+        {
+            return _container.GetInstance(service, key);
+        }
 
-protected override IEnumerable<object> GetAllInstances(Type service)
-{
-    return _container.GetAllInstances(service);
-}
+        protected override IEnumerable<object> GetAllInstances(Type service)
+        {
+            return _container.GetAllInstances(service);
+        }
 
-protected override void BuildUp(object instance)
-{
-    _container.BuildUp(instance);
-}
+        protected override void BuildUp(object instance)
+        {
+            _container.BuildUp(instance);
+        }
 ```
 5. Instead of creating a new Bootstrapper in WinRT replace the existing Application with as shown below,
 Open App.xaml and paste the code below, 
