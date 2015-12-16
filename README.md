@@ -64,7 +64,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
     DisplayRootViewFor<TestViewModel>();
 }
 ```
-
+Also, declare the ```TestViewModel``` in the ```Configure``` function of ```App.xaml.cs``` as shown [here](https://github.com/vinayganesh/BandsInTownUWP/blob/master/BandsInTownUWP/App.xaml.cs)
 #### How to setup services and constructor injection
 
 For ease of explanation, i will show you how to setup a part of ArtistInformationService and inject the service into the TestViewModel that you created in the previous step. 
@@ -133,6 +133,7 @@ public async Task<ArtistContract> GetArtistInfo(string artistName)
     return artistJsonData;
 }
 ```
+At last, you will have to declare the services in the ```App.xaml.cs``` as shown [here](https://github.com/vinayganesh/BandsInTownUWP/blob/master/BandsInTownUWP/App.xaml.cs) under the ```Configure``` function.
 NOTE: I have used another class called constants to define all the url information as shown [here](https://github.com/vinayganesh/BandsInTownUWP/blob/master/AppConstants/Constants.cs)
 
 ##### Setting up constructor Injection
@@ -157,7 +158,7 @@ protected override void OnInitialize()
 
 The jsonAristData object will contain all the information about the band Megadeth as shown [here](http://www.bandsintown.com/api/responses#artist-json). 
 
-###Future additions, 
+###Future additions
 
 Creating a UI for the data received using Caliburn Micro and the new UWP layout called the relative layout that will help the app scale from a phone - tablet - desktop. 
 
