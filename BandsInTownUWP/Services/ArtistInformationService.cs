@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using HttpManager.DataContract;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using BandsInTownUWP.Helpers;
 
