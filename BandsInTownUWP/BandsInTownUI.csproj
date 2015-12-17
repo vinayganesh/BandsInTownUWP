@@ -110,7 +110,11 @@
     <Compile Include="Services\JustAnnouncedEventsService.cs" />
     <Compile Include="Services\PopularEventsNearbyService.cs" />
     <Compile Include="Services\RecommendedArtists.cs" />
+    <Compile Include="ViewModels\LandingPageViewModel.cs" />
     <Compile Include="ViewModels\TestViewModel.cs" />
+    <Compile Include="Views\LandingPageView.xaml.cs">
+      <DependentUpon>LandingPageView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -136,7 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppConstants\AppConstants.csproj">
@@ -147,6 +150,12 @@
       <Project>{000c690e-09fa-4902-aa03-434dadc6452f}</Project>
       <Name>HttpManager</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\LandingPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

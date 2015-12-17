@@ -14,12 +14,10 @@
         public static readonly string JustAnnouncedRadius = "&radius=75";
         public static readonly string JustAnnouncedEventsItemsPerPage = "&per_page=15&authenticate=false";
         public static readonly string RecommendedArtistsUrl = "http://app.bandsintown.com/artists/recommended?popular=true";
-        public static readonly string RecommendedArtistsPerPage = "&per_page=50&authenticate=false";
+        public static readonly string RecommendedArtistsPerPage = "&per_page=100&authenticate=false";
         public static readonly string EventsSearchUrl= "/events/search.json";
         public static readonly string EventsSearchLocation = "&location=";
         public static readonly string EventsSearchRadius = "&radius=";
-
-
     }
 }
 

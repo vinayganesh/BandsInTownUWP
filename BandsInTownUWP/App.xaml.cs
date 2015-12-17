@@ -23,6 +23,7 @@ namespace BandsInTownUWP
             _container.RegisterWinRTServices();
 
             _container.PerRequest<TestViewModel>();
+            _container.PerRequest<LandingPageViewModel>();
             _container.Singleton<IArtistInformationService, ArtistInformationService>();
             _container.Singleton<IGeoCoderService, GeoCoderService>();
             _container.Singleton<IPopularEventsNearbyService, PopularEventsNearbyService>();
@@ -32,7 +33,7 @@ namespace BandsInTownUWP
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            DisplayRootViewFor<TestViewModel>();
+            DisplayRootViewFor<LandingPageViewModel>();
         }
 
         protected override object GetInstance(Type service, string key)
