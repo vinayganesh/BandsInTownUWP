@@ -110,8 +110,12 @@
     <Compile Include="Services\JustAnnouncedEventsService.cs" />
     <Compile Include="Services\PopularEventsNearbyService.cs" />
     <Compile Include="Services\RecommendedArtists.cs" />
+    <Compile Include="ViewModels\ArtistInfoViewModel.cs" />
     <Compile Include="ViewModels\LandingPageViewModel.cs" />
     <Compile Include="ViewModels\TestViewModel.cs" />
+    <Compile Include="Views\ArtistInfoView.xaml.cs">
+      <DependentUpon>ArtistInfoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LandingPageView.xaml.cs">
       <DependentUpon>LandingPageView.xaml</DependentUpon>
     </Compile>
@@ -123,6 +127,13 @@
     <None Include="BandsInTownUWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\BITAssets\BadgeLogo.scale-240.png" />
+    <Content Include="Assets\BITAssets\BandsInTownSplashScreen.png" />
+    <Content Include="Assets\BITAssets\Logo.scale-240.png" />
+    <Content Include="Assets\BITAssets\SmallLogo.scale-240.png" />
+    <Content Include="Assets\BITAssets\SplashScreen.scale-240.png" />
+    <Content Include="Assets\BITAssets\Square71x71Logo.scale-240.png" />
+    <Content Include="Assets\BITAssets\StoreLogo.scale-240.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -152,6 +163,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\ArtistInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LandingPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

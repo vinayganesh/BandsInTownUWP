@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="BandsInTownUWP.Views.ArtistInfoView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BandsInTownUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:BandsInTownUWP.ViewModels"
+    d:DataContext="{d:DesignInstance viewModels:ArtistInfoViewModel}"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="35" Grid.Row="0" Foreground="White" Text="{Binding Events[].artists[].name}"></TextBlock>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Source="{Binding Events[].artists[].thumb_url}"></Image>
+        <ListView Grid.Row="2" ItemsSource="{Binding Events}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="15" Text="{Binding title}" Foreground="White"/>
+                            <TextBlock Text="{Binding formatted_datetime}" Foreground="White" FontSize="10"/>
+                            <TextBlock Text="{Binding venue.city}" Foreground="White" FontSize="10"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
+

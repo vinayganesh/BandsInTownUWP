@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using Windows.ApplicationModel.Activation;
+using Windows.UI.Xaml.Controls;
 using BandsInTownUWP.IServices;
 using BandsInTownUWP.Services;
 using BandsInTownUWP.ViewModels;
+using BandsInTownUWP.Views;
 
 namespace BandsInTownUWP
 {
@@ -24,6 +26,8 @@ namespace BandsInTownUWP
 
             _container.PerRequest<TestViewModel>();
             _container.PerRequest<LandingPageViewModel>();
+            _container.PerRequest<ArtistInfoViewModel>();
+
             _container.Singleton<IArtistInformationService, ArtistInformationService>();
             _container.Singleton<IGeoCoderService, GeoCoderService>();
             _container.Singleton<IPopularEventsNearbyService, PopularEventsNearbyService>();
@@ -33,7 +37,7 @@ namespace BandsInTownUWP
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            DisplayRootViewFor<LandingPageViewModel>();
+            DisplayRootView<LandingPageView>();
         }
 
         protected override object GetInstance(Type service, string key)
@@ -49,6 +53,11 @@ namespace BandsInTownUWP
         protected override void BuildUp(object instance)
         {
             _container.BuildUp(instance);
+        }
+
+        protected override void PrepareViewFirst(Frame rootFrame)
+        {
+            _container.RegisterNavigationService(rootFrame);
         }
     }
 }

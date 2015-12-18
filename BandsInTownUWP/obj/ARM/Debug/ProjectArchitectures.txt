@@ -1,0 +1,4 @@
+C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\AppConstants\AppConstants.csproj;arm
+C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\AppConstants\AppConstants.csproj;arm
+C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\BandsInTownUI.csproj;arm
+C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\HttpClient\HttpManager.csproj;arm

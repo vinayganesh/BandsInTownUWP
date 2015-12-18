@@ -9,52 +9,24 @@
      xmlns:viewModels1="using:BandsInTownUWP.ViewModels"
      d:DataContext="{d:DesignInstance viewModels1:LandingPageViewModel}">
 
-    <SplitView
-               DisplayMode="CompactOverlay"
-               IsPaneOpen="{Binding IsPaneOpen}" 
-               CompactPaneLength="50" 
-               OpenPaneLength="250">
-        <SplitView.Pane>
-            <StackPanel Background="LightGray">
-                <Button FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                    Width="50" Height="50" Background="Transparent" micro:Message.Attach="[Event Tapped] = [Action Open]"/>
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE825;"
-                    Width="50" Height="50" Background="Transparent"/>
-                    <TextBlock Text="Recommended Artists" FontSize="18" VerticalAlignment="Center" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                        Width="50" Height="50" Background="Transparent"/>
-                    <TextBlock Text="Just Announced" FontSize="18" VerticalAlignment="Center" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
-                        Width="50" Height="50" Background="Transparent"/>
-                    <TextBlock Text="Popular Events Nearby" FontSize="18" VerticalAlignment="Center" />
-                </StackPanel>
-            </StackPanel>
-        </SplitView.Pane>
-        <SplitView.Content>
-            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                <GridView ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView ScrollViewer.VerticalScrollBarVisibility="Hidden" 
                               ItemsSource="{Binding RecommendedArtists}" 
-                              Background="Black">
-                    <GridView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <StackPanel Orientation="Vertical">
-                                    <Image Source="{Binding image_url}" Width="80" Height="80"/>
-                                    <TextBlock Text="{Binding name}" Foreground="White" FontSize="10"/>
-                                </StackPanel>
-                            </Grid>
-                        </DataTemplate>
-                    </GridView.ItemTemplate>
-                </GridView>
-            </Grid>
-        </SplitView.Content>
-    </SplitView>
-
-
-    
+                              Background="Black" 
+                              SelectedItem="{Binding SelectedArtist}"
+                              micro:Message.Attach="[Event SelectionChanged] = 
+                                                    [Action ArtistSelectionChanged($this.SelectedItem)]">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="{Binding image_url}" Width="80" Height="80"/>
+                            <TextBlock Text="{Binding name}" Foreground="White" FontSize="10"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
 </Page>

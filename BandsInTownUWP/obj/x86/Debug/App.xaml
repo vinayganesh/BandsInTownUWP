@@ -1,0 +1,10 @@
+﻿<cm:CaliburnApplication
+     x:Class="BandsInTownUWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BandsInTownUWP"
+    xmlns:cm="using:Caliburn.Micro"
+    RequestedTheme="Light">
+
+</cm:CaliburnApplication>
+
