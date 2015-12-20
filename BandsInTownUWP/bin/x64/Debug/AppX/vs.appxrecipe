@@ -10,25 +10,19 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>19b9ae1c-4c98-489a-8194-d465518ee560</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\obj\x64\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>19AE46611E960D51242117AF07E417672DA1A766B8E07DA9823BF725D2B8C8BD</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>19b9ae1c-4c98-489a-8194-d465518ee560_1.0.0.0_x64__kwantk1229zx6</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>19b9ae1c-4c98-489a-8194-d465518ee560_kwantk1229zx6!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>19b9ae1c-4c98-489a-8194-d465518ee560</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=vinayganesh</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
-    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+    <RegisteredManifestChecksum>091C6158ADB41EFB218280EEDC1B6ACC60F424BD9F2CD350621EABD20F1DE74F</RegisteredManifestChecksum>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-18T03:48:44.946</Modified>
+      <Modified>2015-12-19T01:40:08.694</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\bin\x64\Debug\BandsInTownUWP.exe">
       <PackagePath>entrypoint\BandsInTownUWP.exe</PackagePath>
-      <Modified>2015-12-18T03:48:42.506</Modified>
+      <Modified>2015-12-19T01:40:04.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\.nuget\packages\Caliburn.Micro\2.0.1\lib\win81\Caliburn.Micro.Extensions.dll">
       <PackagePath>Caliburn.Micro.Extensions.dll</PackagePath>
@@ -484,15 +478,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\HttpClient\bin\x64\Debug\HttpManager.dll">
       <PackagePath>HttpManager.dll</PackagePath>
-      <Modified>2015-12-18T03:39:00.833</Modified>
+      <Modified>2015-12-19T01:40:02.526</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2015-12-14T22:18:39.998</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2015-12-14T22:18:37.556</Modified>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\BadgeLogo.scale-240.png">
+      <PackagePath>Assets\BITAssets\BadgeLogo.scale-240.png</PackagePath>
+      <Modified>2015-07-06T06:49:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\BandsInTownSplashScreen.png">
+      <PackagePath>Assets\BITAssets\BandsInTownSplashScreen.png</PackagePath>
+      <Modified>2015-07-06T06:49:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\Logo.scale-240.png">
+      <PackagePath>Assets\BITAssets\Logo.scale-240.png</PackagePath>
+      <Modified>2015-07-06T06:49:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\BITAssets\SmallLogo.scale-240.png</PackagePath>
+      <Modified>2015-07-06T06:49:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\BITAssets\SplashScreen.scale-240.png</PackagePath>
+      <Modified>2015-07-06T06:49:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\BITAssets\Square71x71Logo.scale-240.png</PackagePath>
+      <Modified>2015-07-06T06:49:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\BITAssets\StoreLogo.scale-240.png</PackagePath>
+      <Modified>2015-07-06T06:49:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -500,22 +518,18 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T05:09:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T05:09:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T05:09:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T05:09:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\StoreLogo.png">
@@ -528,9 +542,13 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T05:09:42.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2015-12-14T22:18:37.556</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\bin\x64\Debug\BandsInTownUWP.xr.xml">
       <PackagePath>BandsInTownUWP.xr.xml</PackagePath>
-      <Modified>2015-12-18T03:39:02.369</Modified>
+      <Modified>2015-12-19T01:40:04.570</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -538,11 +556,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-18T03:39:04.487</Modified>
+      <Modified>2015-12-19T01:40:07.869</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\bin\x64\Debug\Core\BandsInTownUWP.exe">
       <PackagePath>BandsInTownUWP.exe</PackagePath>
-      <Modified>2015-12-18T03:48:44.943</Modified>
+      <Modified>2015-12-19T01:40:08.685</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

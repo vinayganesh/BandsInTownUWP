@@ -366,27 +366,41 @@
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\BadgeLogo.scale-240.png">
+      <PackagePath>Assets\BITAssets\BadgeLogo.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\BandsInTownSplashScreen.png">
+      <PackagePath>Assets\BITAssets\BandsInTownSplashScreen.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\Logo.scale-240.png">
+      <PackagePath>Assets\BITAssets\Logo.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\BITAssets\SmallLogo.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\BITAssets\SplashScreen.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\BITAssets\Square71x71Logo.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\BITAssets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\BITAssets\StoreLogo.scale-240.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
@@ -395,6 +409,9 @@
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vinayganesh\Documents\GitProjects\BandsInTownUWP\BandsInTownUWP\bin\x64\Debug\BandsInTownUWP.xr.xml">
       <PackagePath>BandsInTownUWP.xr.xml</PackagePath>

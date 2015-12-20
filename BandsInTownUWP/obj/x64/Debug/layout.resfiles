@@ -1,5 +1,12 @@
 WinMetadata\Windows.winmd
 ApplicationInsights.config
+Assets\BITAssets\BadgeLogo.scale-240.png
+Assets\BITAssets\BandsInTownSplashScreen.png
+Assets\BITAssets\Logo.scale-240.png
+Assets\BITAssets\SmallLogo.scale-240.png
+Assets\BITAssets\SplashScreen.scale-240.png
+Assets\BITAssets\Square71x71Logo.scale-240.png
+Assets\BITAssets\StoreLogo.scale-240.png
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png

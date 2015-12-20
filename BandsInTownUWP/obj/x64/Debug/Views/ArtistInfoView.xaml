@@ -9,8 +9,27 @@
     d:DataContext="{d:DesignInstance viewModels:ArtistInfoViewModel}"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="35" Grid.Row="0" Foreground="White" Text="{Binding Events[].artists[].name}"></TextBlock>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Source="{Binding Events[].artists[].thumb_url}"></Image>
+        <ListView Grid.Row="2" ItemsSource="{Binding Events}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="15" Text="{Binding title}" Foreground="White"/>
+                            <TextBlock Text="{Binding formatted_datetime}" Foreground="White" FontSize="10"/>
+                            <TextBlock Text="{Binding venue.city}" Foreground="White" FontSize="10"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>
 

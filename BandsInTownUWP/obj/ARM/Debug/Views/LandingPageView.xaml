@@ -9,9 +9,16 @@
      xmlns:viewModels1="using:BandsInTownUWP.ViewModels"
      d:DataContext="{d:DesignInstance viewModels1:LandingPageViewModel}">
 
+    
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+           
+        </Grid.RowDefinitions>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <GridView ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+        <TextBlock Grid.Row="0" Foreground="White" FontSize="35">Recommended Artists</TextBlock>
+        <GridView Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Hidden" 
                               ItemsSource="{Binding RecommendedArtists}" 
                               Background="Black" 
                               SelectedItem="{Binding SelectedArtist}"
